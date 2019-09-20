@@ -23,6 +23,8 @@ These are script names used by react-scripts (start, build, test, eject). If you
   - "build" will transpile and package your application, which can then be deployed to a web server without needing to set up a transpiler on the server.
   - "test" will run unit tests and other tests you define for your application (a subject for another day).
   - "eject" will basically reconfigure your package.json file, unhiding all of the configuration nonsense that create-react-app has hidden. It makes package.json extremely verbose, but also gives you more control over execution, building, and deploy settings.
+  
+"start" and "build" are scripts that you will use most often.
 
 Since react-scripts is installed "locally" and not "globally", if you want to run it directly, you have to run it through the "npx" utility.
 
@@ -30,7 +32,13 @@ For example:
 
     npx react-scripts start
     
+(To run global packages at the command line, you can use npm or yarn).
+    
 This will cause react-scripts to "build" your application (by running it through the Babel transpiler, converting all of the JSX into vanilla JavaScript, and also "packaging" your app using the WebPack module), and it will also start an HTTP server on localhost:3000 (by default), and open a browser window pointing to that server.
+
+If you want to see what transpiling with Babel, and then packaging with WebPack, do to your application (and all of the modules it depends on), run the build script:
+
+    npx react-scripts build
 
 In my experience, you have to refresh the page to get the app to load, after react-scripts finishes transpiling and packaging the app.
 
